@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--开启ie最高级别渲染引擎-->
+    <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge">
+    <!--页面自适应初识缩放比例-->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>resume</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" type="text/css">
+
+    <!--自定义样式-->
+    <link rel="stylesheet" href="../css/site.css" type="text/css">
+    <!--h5和css3检测脚本-->
+    <script src="../js/modernizr-1.6.min.js"></script>
+    <!--IE版本检测，兼容h5新元素，兼容css3媒体查询-->
+    <script src="../js/html5shiv.js"></script>
+    <script src="../js/respond.js"></script>
+</head>
+<body>
+    <!--导航栏-->
+    <ul class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a href="index.html" class="navbar-brand">
+                    <span class="glyphicon glyphicon-home"></span>
+                </a>
+                <button class="navbar-toggle" data-toggle="collapse" data-target="#divNav">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div id="divNav" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="#info">基本信息</a></li>
+                    <li><a href="#skill">个人技能</a></li>
+                    <li><a href="#work">工作经验</a></li>
+                    <li><a href="#project">项目展示</a></li>
+                    <li><a href="#contact">请联系我</a></li>
+                </ul>
+            </div>
+        </div>
+    </ul>
+
+    <!--标题栏-->
+    <header class="page-header hidden-xs">
+        <h1>个人简历 <small>使用 github 个人建站功能</small></h1>
+    </header>
+
+    <div>
+        <!-- 基本信息 -->
+        <div class="row">
+            <h2 id="info" class="lead visible-lg visible-md visible-sm">基本信息</h2>
+            <div class="col-sm-4">
+                <blockquote>
+                    <h2>益立锋</h2>
+                    <footer>c/c++高级开发工程师</footer>
+                </blockquote>
+                <div class="row text-center">
+                    <img src="../image/my.jpg" alt="boy" class="img-responsive img-circle img-thumbnail">
+                </div>
+                <p></p>
+                <div class="row text-center">
+                    <div class="col-sm-4">
+                        <h2><abbr title="2年工作经验">2</abbr></h2>
+                    </div>
+                    <div class="col-sm-4">
+                        <h2><abbr title="2个大型项目">2</abbr></h2>
+                    </div>
+                    <div class="col-sm-4">
+                        <h2><abbr title="6门相关技能">6</abbr></h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-8">
+                <div class="jumbotron">
+                    <h2>自我评价</h2>
+                    <hr>
+                    <p>1、<kbd>自学</kbd>能力强，思维敏捷，对于新知识接受快，勇于面对困难，<code>敢于挑战；</code></p>
+                    <p>2、为人诚恳，待人真诚，具有良好的<code>团队合作精神</code>和<code>沟通组织能力；</code></p>
+                    <p>3、具有较高的<kbd>学习能力</kbd>，适合从事<code>IT领域</code>的相关工作。</p>
+                    <div class="text-right">
+                        <button class="btn btn-primary">
+                            了解更多
+                            <span class="glyphicon glyphicon-search"></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="table-responsive">
+                    <table class="table table-bordered table-striped table-condensed table-hover">
+                        <tr>
+                            <td>姓名</td>
+                            <td>益立锋</td>
+                            <td>性别</td>
+                            <td>男</td>
+                        </tr>
+                        <tr>
+                            <td>出生日期</td>
+                            <td>1990.09.12</td>
+                            <td>毕业院校</td>
+                            <td>西安理工大学</td>
+                        </tr>
+                        <tr>
+                            <td>专业</td>
+                            <td>计算机科学与技术</td>
+                            <td>学历</td>
+                            <td>本科</td>
+                        </tr>
+                        <tr>
+                            <td>手机</td>
+                            <td>15202469323</td>
+                            <td>邮箱</td>
+                            <td>1171403023@.com</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!--个人技能-->
+        <div class="row">
+            <h2 id="skill" class="lead">个人技能</h2>
+            <h3 class="lead"><small>专业技能</small></h3>
+            <p>
+                <span class="label label-success">c</span>
+                <span class="label label-success">c++</span>
+                <span class="label label-success">linux</span>
+                <span class="label label-success">数据结构</span>
+                <span class="label label-success">基本算法</span>
+            </p>
+            <div class="progress">
+                <div class="progress-bar progress-bar-success progress-bar-striped active" style="width: 90%">
+                    <span>90% complete</span>
+                </div>
+            </div>
+            <p>
+                <span class="label label-warning">shell脚本语言</span>
+                <span class="label label-warning">vim编辑器的使用</span>
+                <span class="label label-warning">进程间通讯及相关函数</span>
+                <span class="label label-warning">linux常见命令</span>
+            </p>
+            <div class="progress">
+                <div class="progress-bar progress-bar-warning progress-bar-striped active" style="width: 80%">
+                    <span>80% complete</span>
+                </div>
+            </div>
+            <p>
+                <span class="label label-danger">php</span>
+                <span class="label label-danger">mysql</span>
+                <span class="label label-danger">javascript</span>
+                <span class="label label-danger">html</span>
+                <span class="label label-danger">css</span>
+            </p>
+            <div class="progress">
+                <div class="progress-bar progress-bar-danger progress-bar-striped active" style="width: 60%">
+                    <span>60% complete</span>
+                </div>
+            </div>
+
+            <h3 class="lead"><small>语言能力</small></h3>
+            <p>
+                <span class="label label-warning">英语四级</span>
+                <span class="label label-warning">普通话水平</span>
+                <span class="label label-warning">口头表述能力</span>
+                <span class="label label-warning">书面能力</span>
+                <span class="label label-warning">理解能力</span>
+            </p>
+            <div class="progress">
+                <div class="progress-bar progress-bar-warning progress-bar-striped active" style="width: 95%">
+                    <span>95% complete</span>
+                </div>
+            </div>
+        </div>
+
+        <!--工作经验-->
+        <div class="row">
+            <h2 id="work" class="lead">工作经验</h2>
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <span>2015.7 —— 2016.6</span>
+                    <span class="lead text-primary">上海淘米网络科技有限公司</span>
+                    <div>linux开发工程师：<small class="text-info">运维开发性质。</small></div>
+                </li>
+                <li class="list-group-item">
+                    <span>2016.7 —— 2017.6</span>
+                    <span class="lead text-primary">中软国际服务有限公司</span>
+                    <div>c/c++高级开发工程师：<small class="text-info">服务器开发，restful性质。</small></div>
+                </li>
+            </ul>
+        </div>
+        <!--项目展示-->
+        <div class="row">
+            <h2 id="project" class="lead">项目展示</h2>
+            <div class="col-sm-8">
+                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                    </ol>
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox">
+                        <div class="item active">
+                            <img class="img-responsive img-rounded" style="margin: auto" src="../image/taomee.jpg" alt="...">
+                            <div class="carousel-caption">
+                                <h3>运维开发，游戏的登陆和支付平台。</h3>
+                                <p><kbd>淘米网络</kbd></p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img class="img-responsive img-rounded" style="margin: auto" src="../image/chinasoft.jpg" alt="...">
+                            <div class="carousel-caption">
+                                <h3>服务器管理软件开发</h3>
+                                <p><kbd>华为业务群</kbd></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Controls -->
+                    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <p2><kbd>1、登陆及支付API开发</kbd></p2>
+                <p>开发工具：linux操作系统（debian7.8）、PHP、C++、Mysql、shell</p>
+                <p>项目内容：登陆、支付API的开发工作，为游戏前端及服务器提供可调用的API，登陆和支付的时候前端和
+                    游戏服务器发送数据，进而处理并保存；API是面向资源的，无状态的，基于http协议及json
+                    数据协议发送，统一接口，具有Restful性质。</p>
+                <p2><kbd>2、RestfulAPI开发</kbd></p2>
+                <p>开发工具：linux操作系统、C语言、C++及华为内部开发工具</p>
+                <p>项目内容：服务器管理软件，具体工作已签保密协议。</p>
+            </div>
+            <!--
+            <div class="col-sm-4">
+                <p>
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="../videos/my.mp4"></iframe>
+                    </div>
+                </p>
+                <p>
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="../videos/my.mp4"></iframe>
+                    </div>
+                </p>
+            </div>-->
+        </div>
+        <!--请联系我-->
+        <div class="row">
+            <h2 id="contact" class="lead">请联系我</h2>
+            <div class="panel panel-default">
+                <div class="panel-heading"><code>如果您对我的简历感兴趣。</code></div>
+                <div class="panel-body">
+                    <form action="index.html" method="post">
+                        <div class="form-group has-feedback has-success">
+                            <label class="control-label" for="email">Email</label>
+                            <input type="email" class="form-control" id="email">
+                            <span class="glyphicon glyphicon-ok form-control-feedback"></span>
+                        </div>
+                        <div class="form-group has-feedback has-warning">
+                            <label class="control-label" for="username">username</label>
+                            <input type="text" class="form-control" id="username">
+                            <span class="glyphicon glyphicon-warning-sign form-control-feedback"></span>
+                        </div>
+                        <div class="form-group has-feedback has-error">
+                            <label class="control-label" for="content">content</label>
+                            <div class="input-group">
+                                <label class="input-group-addon">@</label>
+                                <input type="text" class="form-control" id="content">
+                            </div>
+                            <span class="glyphicon glyphicon-remove form-control-feedback"></span>
+                        </div>
+                        <div class="btn-group pull-right">
+                            <button type="submit" class="btn btn-success">请联系我</button>
+                            <button type="reset" class="btn btn-danger">重置</button>
+                        </div>
+                        <div class="clearfix"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center">
+        <span>all images and contents &copy; 2017</span>
+    </footer>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+</body>
+</html>
