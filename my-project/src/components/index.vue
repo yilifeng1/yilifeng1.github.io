@@ -1,15 +1,18 @@
 <template>
   <el-container style="height: 100%">
-    <el-header>
-      <top-header></top-header>
+    <el-header style="min-width: 300px; width:100%; position:fixed; top:0; left:0; background-color: white; z-index:9999">
+      <top-header
+        v-on:transferAside="getAside"
+        :aside="showAside">
+      </top-header>
     </el-header>
 
-    <el-container>
-      <el-aside width="150px">
+    <el-container style="margin-top: 50px">
+      <el-aside  v-if="showAside && moreView" style="min-width: 15%">
         <aside-aside name="qwert"></aside-aside>
       </el-aside>
 
-      <el-main>
+      <el-main style="min-width: 80%">
         <div id="content">
           <slot name="content"></slot>
           <router-view></router-view>
@@ -31,6 +34,23 @@ export default {
   },
   data () {
     return {
+      showAside: true,
+      moreView: this.getWidth()
+    }
+  },
+  methods: {
+    getWidth () {
+      if (document.body.offsetWidth < 650) {
+        return false
+      } else {
+        return true
+      }
+    },
+    getAside (aside) {
+      console.log('show aside')
+      console.log(aside)
+      this.showAside = aside
+      this.moreView = true
     }
   }
 }
