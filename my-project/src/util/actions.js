@@ -7,7 +7,10 @@ import testApi from '../api/test'
 var url = 'https://cloud.bmob.cn/78bbeb25ef1fc41d/'
 
 export const queryTest = function () {
-  testApi.queryTest(url)
+  let res = testApi.queryTest(url)
+  console.log('in actions')
+  console.log(res)
+  return res
 }
 
 export const createTest = function ({commit}, param) {

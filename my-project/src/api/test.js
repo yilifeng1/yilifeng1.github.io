@@ -4,7 +4,17 @@ export default {
   queryTest (url) {
     return Vue.http.get(url + 'query_test_info')
       .then(function (response) {
-        console.log(response)
+        console.log(response.body)
+        if (response.status) {
+          if (typeof response.body === 'string') {
+            return JSON.parse(response.body).results
+          } else {
+            return response.body.results
+          }
+        } else {
+          console.log(response.body)
+          throw new Error(response.body)
+        }
       })
   },
 
