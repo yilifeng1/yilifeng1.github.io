@@ -10,6 +10,9 @@ import router from './router'
 
 // css
 import 'element-ui/lib/theme-chalk/index.css'
+import '../static/css/font-awesome.css'
+import '../static/css/animate.css'
+
 // js
 import * as actions from './util/actions'
 import ManagerUnit from '@/components/ManagerUnit' // 自定义的组件

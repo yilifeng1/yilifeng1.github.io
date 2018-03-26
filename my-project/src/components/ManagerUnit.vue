@@ -297,10 +297,12 @@ export default {
       alert('这是一个查询按钮')
     },
     handleConfig () {
-      this.$refs.tablecolumn_dlg.open(this.columns)
+      alert('这是一个按钮')
+      // this.$refs.tablecolumn_dlg.open(this.columns)
       // this.$refs.tablecolumn_dlg.form = this.columns
     },
     renderHeader (createElement, { _self }) {
+      console.log('in render header')
       return createElement(
         'i',
         [
