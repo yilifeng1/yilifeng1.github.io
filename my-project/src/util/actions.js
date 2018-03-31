@@ -8,11 +8,15 @@ var url = 'https://cloud.bmob.cn/78bbeb25ef1fc41d/'
 
 export const queryTest = function () {
   let res = testApi.queryTest(url)
-  console.log('in actions')
-  console.log(res)
   return res
 }
 
 export const createTest = function ({commit}, param) {
   testApi.createTest(url, param)
+}
+
+export const deleteOneData = function ({commit}, param) {
+  let res = testApi.deleteOneData(url, param)
+  console.log('in actions')
+  console.log(res)
 }

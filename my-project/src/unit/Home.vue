@@ -15,11 +15,11 @@
 
 <script>
 import { mapActions } from 'vuex'
-// import ManagerUnit from '@/components/ManagerUnit'
+import ManagerUnit from '@/components/ManagerUnit'
 export default {
   name: 'home-manager',
   components: {
-    // 'manager-unit': ManagerUnit
+    'manager-unit': ManagerUnit
   },
   data () {
     return {
@@ -97,7 +97,8 @@ export default {
   },
   methods: {
     ...mapActions([
-      'queryTest'
+      'queryTest',
+      'deleteOneData'
     ]),
     refresh () {
       this.queryTest()
@@ -159,7 +160,7 @@ export default {
         cancelButtonText: '取消',
         type: 'warning'
       }).then(() => {
-        // this.deleteParentdisk(row)
+        this.deleteOneData(row)
         alert('delete')
       }).catch(() => {
         this.$message({

@@ -23,5 +23,12 @@ export default {
       .then(function (response) {
         console.log(response)
       })
+  },
+
+  deleteOneData (url, param) {
+    return Vue.http.delete(url + 'delete_test_info', {'objectId': param.objectId}, {emulateJSON: true})
+      .then(function (response) {
+        console.log(response)
+      })
   }
 }
