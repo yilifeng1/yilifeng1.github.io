@@ -7,7 +7,6 @@
                    :key="index"
                    type="text"
                    size="mini"
-                   style="color: #555f6c;"
                    @click="emit(item.event)">
           &nbsp;{{ item.text }}&nbsp;
         </el-button>
@@ -60,47 +59,87 @@
       <el-main>
         <div id="tablecontent">
           <div class="margin-left:20px;">
-            <el-row id="button-group">
+            <el-row id="button-group" style="border: red">
               <el-col :xs="24" :sm="24" :md="21" :lg="21">
-                <el-button-group v-if="buttonGroup1">
-                  <el-button v-for="(item, index) in buttonGroup1"
-                             :type="item.type?item.type:'primary'"
-                             size="small"
-                             :key="index"
-                             v-if="item.visible == true"
-                             @click="emit(item.event)">
-                    {{item.text }}
-                  </el-button>
-                </el-button-group>
-                <el-dropdown trigger="click" style="margin-left:20px;" v-if="buttonList1">
-                  <el-button type="primary" size="small">
-                    {{buttonList1[0].name}}
-                    <i class="el-icon-caret-bottom el-icon--right"></i>
-                  </el-button>
-                  <el-dropdown-menu slot="dropdown">
-                  </el-dropdown-menu>
-                </el-dropdown>
-                <el-button-group style="margin-left:20px;" v-if="buttonGroup2">
-                  <el-button v-for="(item, index) in buttonGroup2"
-                             :type="item.type?item.type:'primary'"
-                             size="small"
-                             :key="index"
-                             v-if="item.visible == true"
-                             @click="emit(item.event)">
-                    &nbsp;{{item.text }}
-                  </el-button>
-                </el-button-group>
-                <el-button v-for="(item, index) in button"
+              <el-button-group v-if="buttonGroup1">
+                <el-button v-for="(item, index) in buttonGroup1"
                            :type="item.type?item.type:'primary'"
                            size="small"
                            :key="index"
                            v-if="item.visible == true"
-                           @click="emit(item.event)"
-                           style="margin-left:20px;">
+                           @click="emit(item.event)">
                   {{item.text }}
-                </el-button>
+              </el-button>
+              </el-button-group>
+              <!--<el-dropdown trigger="click" style="margin-left:20px;" v-if="buttonList1">-->
+                <!--<el-button type="primary" size="small">-->
+                  <!--{{buttonList1[0].name}}-->
+                  <!--<i class="el-icon-caret-bottom el-icon&#45;&#45;right"></i>-->
+                <!--</el-button>-->
+                <!--<el-dropdown-menu slot="dropdown">-->
+                  <!--<el-dropdown-item v-for="(buttonItem, buttonIndex) in buttonList1[0].buttons" style="text-align:center">-->
+                    <!--<el-button type="text"-->
+                               <!--size="small"-->
+                               <!--:key="buttonIndex"-->
+                               <!--@click="emit(buttonItem.event)">-->
+                      <!--{{buttonItem.text }}-->
+                      <!--</el-button>-->
+                  <!--</el-dropdown-item>-->
+                <!--</el-dropdown-menu>-->
+              <!--</el-dropdown>-->
+              <!--<el-dropdown trigger="click" style="margin-left:20px;" v-if="buttonList2">-->
+                <!--<el-button type="primary" size="small">-->
+                  <!--{{buttonList2[0].name}}-->
+                  <!--<i class="el-icon-caret-bottom el-icon&#45;&#45;right"></i>-->
+                <!--</el-button>-->
+                <!--<el-dropdown-menu slot="dropdown">-->
+                  <!--<el-dropdown-item v-for="(buttonItem, buttonIndex) in buttonList2[0].buttons" style="text-align:center">-->
+                    <!--<el-button type="text"-->
+                               <!--size="small"-->
+                               <!--:key="buttonIndex"-->
+                               <!--@click="emit(buttonItem.event)">-->
+                      <!--{{buttonItem.text }}-->
+                      <!--</el-button>-->
+                  <!--</el-dropdown-item>-->
+                <!--</el-dropdown-menu>-->
+              <!--</el-dropdown>-->
+              <!--<el-dropdown trigger="click" style="margin-left:20px;" v-if="buttonList3">-->
+                <!--<el-button type="primary" size="small">-->
+                  <!--{{buttonList3[0].name}}-->
+                  <!--<i class="el-icon-caret-bottom el-icon&#45;&#45;right"></i>-->
+                <!--</el-button>-->
+                <!--<el-dropdown-menu slot="dropdown">-->
+                  <!--<el-dropdown-item v-for="(buttonItem, buttonIndex) in buttonList3[0].buttons" style="text-align:center">-->
+                    <!--<el-button type="text"-->
+                               <!--size="small"-->
+                               <!--:key="buttonIndex"-->
+                               <!--@click="emit(buttonItem.event)">-->
+                      <!--{{buttonItem.text }}-->
+                      <!--</el-button>-->
+                  <!--</el-dropdown-item>-->
+                <!--</el-dropdown-menu>-->
+              <!--</el-dropdown>-->
+              <el-button-group style="margin-left:20px;" v-if="buttonGroup2">
+                <el-button v-for="(item, index) in buttonGroup2"
+                           :type="item.type?item.type:'primary'"
+                           size="small"
+                           :key="index"
+                           v-if="item.visible == true"
+                           @click="emit(item.event)">
+                  &nbsp;{{item.text }}
+              </el-button>
+              </el-button-group>
+              <el-button v-for="(item, index) in button"
+                         :type="item.type?item.type:'primary'"
+                         size="small"
+                         :key="index"
+                         v-if="item.visible == true"
+                         @click="emit(item.event)"
+                         style="margin-left:20px;">
+                {{item.text }}
+              </el-button>
               </el-col>
-              <el-col :xs="24" :sm="24" :md="3" :lg="3" style="text-align:right;padding-right: 20px">
+              <el-col :xs="24" :sm="24" :md="3" :lg="3" style="text-align:right;padding-right: 20px; margin-top: -5px">
                 <el-button size="small" type="success" @click="emit('refresh')">
                   刷新
                   <i class="fa fa-refresh"></i>
@@ -114,6 +153,7 @@
             <el-table :data="tableData.slice((currentPage-1)*pageSize,currentPage*pageSize)"
                       max-height="100%"
                       height=640
+                      border-
                       @selection-change="handleSelectionChange"
                       stripe
                       border
@@ -161,7 +201,6 @@
 
               <el-table-column v-if="inlineIcons"
                                label="操作"
-                               fixed="right"
                                :render-header="renderHeader"
                                align="center">
                 <template scope="scope">
@@ -192,19 +231,21 @@
     </el-container>
     <tablecolumn-dialog ref='tablecolumn_dlg'>
     </tablecolumn-dialog>
+    <group-dialog ref='group_dlg'>
+    </group-dialog>
   </div>
 </template>
 
 <script>
-// import '../assets/css/grouptree.css'
-// import GroupDialog from '@/dialog/GroupDialog'
+import '../assets/css/grouptree.css'
+import GroupDialog from '@/dialog/GroupDialog'
 import TablecolumnDialog from '@/dialog/TablecolumnDialog'
 import ElAside from '../../node_modules/element-ui/packages/aside/src/main'
 export default {
   name: 'manager-unit',
   components: {
     ElAside,
-    // 'group-dialog': GroupDialog,
+    'group-dialog': GroupDialog,
     'tablecolumn-dialog': TablecolumnDialog
   },
   props: [
@@ -214,9 +255,9 @@ export default {
     'tableData',
     'buttonGroup1',
     'buttonGroup2',
-    'buttonList1',
-    'buttonList2',
-    'buttonList3',
+    // 'buttonList1',
+    // 'buttonList2',
+    // 'buttonList3',
     'button',
     'groupType',
     'groupData',
@@ -297,12 +338,10 @@ export default {
       alert('这是一个查询按钮')
     },
     handleConfig () {
-      alert('这是一个按钮')
-      // this.$refs.tablecolumn_dlg.open(this.columns)
+      this.$refs.tablecolumn_dlg.open(this.columns)
       // this.$refs.tablecolumn_dlg.form = this.columns
     },
     renderHeader (createElement, { _self }) {
-      console.log('in render header')
       return createElement(
         'i',
         [
@@ -432,33 +471,33 @@ export default {
       }
       return softsStr
     }
+  },
+  computed: {
+    // columns: {
+    //   get: function () {
+    //     return this.$store.state[this.unitName].columns
+    //   },
+    //   set: function (value) {
+    //     this.$store.commit(`${this.unitName}/setTableColumns`, value)
+    //   }
+    // },
+    // tableData: {
+    //   get () {
+    //     return this.$store.state[this.unitName].tableData
+    //   },
+    //   set (value) {
+    //     this.$store.commit(`${this.unitName}/setTableData`, value)
+    //   }
+    // },
+    // groupData: {
+    //   get () {
+    //     return this.$store.state[this.unitName].groupData
+    //   },
+    //   set (value) {
+    //     this.$store.commit(`${this.unitName}/setGroupData`, value)
+    //   }
+    // }
   }
-  // computed: {
-  //   columns: {
-  //     get: function () {
-  //       return this.$store.state[this.unitName].columns
-  //     },
-  //     set: function (value) {
-  //       this.$store.commit(`${this.unitName}/setTableColumns`, value)
-  //     }
-  //   },
-  //   tableData: {
-  //     get () {
-  //       return this.$store.state[this.unitName].tableData
-  //     },
-  //     set (value) {
-  //       this.$store.commit(`${this.unitName}/setTableData`, value)
-  //     }
-  //   },
-  //   groupData: {
-  //     get () {
-  //       return this.$store.state[this.unitName].groupData
-  //     },
-  //     set (value) {
-  //       this.$store.commit(`${this.unitName}/setGroupData`, value)
-  //     }
-  //   }
-  // }
 }
 </script>
 
@@ -562,5 +601,19 @@ export default {
 <style>
   .el-card__body{
     padding:0px
+  }
+  div.el-col.el-col-24.el-col-xs-24.el-col-sm-24.el-col-md-21.el-col-lg-21{
+    margin-top: -5px;
+  }
+  button.el-button.el-button--text.el-button--mini{
+    color: #555f6c;
+  }
+  button.el-button.el-button--text.el-button--mini:hover{color: #1e90ff}
+  i.fa.fa-search.warning{
+    margin-left: -15px;
+  }
+  .el-table.el-table--fit.el-table--striped.el-table--border.el-table--fluid-height.el-table--enable-row-transition{
+    border-left: 0px;
+    border-right: 0px;
   }
 </style>
